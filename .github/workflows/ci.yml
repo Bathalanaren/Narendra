@@ -1,15 +1,47 @@
-name: My First Workflow
+name: DEVOPS PRACTISE
+ 
+ on: push
+  
+  jobs: 
+    build:
+      runs-on: ubuntu-latest
 
-on:
-  push:
+      steps:  
+        - name: checkout code
+          uses: actions/checkout@v4
+        - name: Build
+          run: echo "HELLO iam devops engineer"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+     test:
+       needs: build
+       name: EXAMPLE TEST
+       runs-on: ubuntu-latest
 
-      - name: Print message
-        run: echo "Hello DevOps!"
+
+       steps:
+        - name: checkout code
+          uses: actions/checkout@v4
+        - name: Test
+          run: echo "hello people"
+
+
+     deploy:
+       needs: test
+       name: Deployment
+       runs-on: ubuntu-latest
+
+       steps:
+        - name: checkout code
+          uses: actions/checkout@v4
+        - name: Deploy
+          run: echo "hello india"   
+
+
+      
+
+
+
+
+
+ 
