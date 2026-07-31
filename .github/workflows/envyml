@@ -1,0 +1,40 @@
+name: DEVOPS PRACTISE
+ 
+ on: push
+  
+  jobs: 
+   build:
+     runs-on: ubuntu-latest
+
+     steps:  
+      - name: checkout code
+        uses: actions/checkout@v4
+      - run: echo "HELLO WORLD"
+
+
+ test:
+  name: EXAM
+   runs-on: ubuntu-latest
+
+
+   steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+     - run: echo "hello people"
+
+
+  deploy:
+   name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: checkout code
+       uses: actions/checkout@v4
+      - run: echo "hello india"   
+      
+
+
+
+
+
+ 
