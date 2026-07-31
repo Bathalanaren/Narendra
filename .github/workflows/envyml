@@ -9,7 +9,7 @@ name: DEVOPS PRACTISE
      steps:  
       - name: checkout code
         uses: actions/checkout@v4
-      - run: echo "HELLO WORLD"
+      - run: echo "HELLO iam devops engineer"
 
 
  test:
