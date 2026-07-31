@@ -12,25 +12,26 @@ name: DEVOPS PRACTISE
       - run: echo "HELLO iam devops engineer"
 
 
- test:
-  name: EXAM
-   runs-on: ubuntu-latest
+   test:
+    name: EXAM
+    runs-on: ubuntu-latest
 
 
    steps:
     - name: checkout code
       uses: actions/checkout@v4
-     - run: echo "hello people"
+    - run: echo "hello people"
 
 
-  deploy:
-   name: Deployment
-    runs-on: ubuntu-latest
+    deploy:
+     name: Deployment
+     runs-on: ubuntu-latest
 
-    steps:
-     - name: checkout code
-       uses: actions/checkout@v4
-      - run: echo "hello india"   
+      steps:
+       - name: checkout code
+         uses: actions/checkout@v4
+       - run: echo "hello india"   
+
       
 
 
